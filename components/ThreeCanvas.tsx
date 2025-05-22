@@ -10,7 +10,7 @@ const ThreeCanvas = () => {
   return (
     <Canvas 
       dpr={[1, 2]} // Set device pixel ratio for performance optimization
-      camera={{ position: [0, 0, 5], fov: 75 }} // Adjusted camera for plane
+      camera={{ position: [0, 30, 30], fov: 50 }} // Raised camera, slightly further, adjusted fov
       style={{ 
         position: 'fixed',
         top: 0,
