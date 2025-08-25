@@ -112,7 +112,7 @@ export default function HeroSection() {
                   </Button>
                 </Link>
                 <Link
-                  href="https://twitter.com"
+                  href="https://twitter.com/akeelabbas29"
                   passHref
                   target="_blank"
                   rel="noopener noreferrer"
