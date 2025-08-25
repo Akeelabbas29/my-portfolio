@@ -6,7 +6,6 @@ import { Button } from "@/components/ui/button";
 import { ArrowDown, Github, Linkedin, Twitter } from "lucide-react";
 import ScrollReveal from "@/components/scroll-reveal";
 import Link from "next/link";
-import ThreeCanvas from '@/components/ThreeCanvas';
 
 export default function HeroSection() {
   const [imageLoaded, setImageLoaded] = useState(false);
@@ -35,7 +34,6 @@ export default function HeroSection() {
       id="home"
       className="min-h-screen flex items-center justify-center pt-24 pb-20 px-4 sm:px-6"
     >
-      <ThreeCanvas />
       <div className="container mx-auto">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           <div className="order-2 lg:order-1">
@@ -114,7 +112,7 @@ export default function HeroSection() {
                   </Button>
                 </Link>
                 <Link
-                  href="https://twitter.com"
+                  href="https://twitter.com/akeelabbas29"
                   passHref
                   target="_blank"
                   rel="noopener noreferrer"

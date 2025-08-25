@@ -1,37 +1,53 @@
-"use client"
+"use client";
 
-import Image from "next/image"
-import { Card, CardContent } from "@/components/ui/card"
-import { Badge } from "@/components/ui/badge"
-import ScrollReveal from "@/components/scroll-reveal"
+import Image from "next/image";
+import { Card, CardContent } from "@/components/ui/card";
+import { Badge } from "@/components/ui/badge";
+import ScrollReveal from "@/components/scroll-reveal";
 
 const skills = [
-  { category: "Frontend", items: ["React", "Next.js", "TypeScript", "Tailwind CSS", "Redux", "HTML/CSS"] },
-  { category: "Backend", items: ["Node.js", "Express", "NestJS", "Python", "Django", "GraphQL"] },
-  { category: "Database", items: ["MongoDB", "PostgreSQL", "MySQL", "Redis", "Prisma", "Supabase"] },
-  { category: "DevOps", items: ["Docker", "AWS", "CI/CD", "Vercel", "Netlify", "Git"] },
-]
+  {
+    category: "Frontend",
+    items: [
+      "React",
+      "Next.js",
+      "TypeScript",
+      "JavaScript (ES6+)",
+      "HTML/CSS",
+      "Tailwind CSS",
+      "Shadcn/ui",
+    ],
+  },
+  {
+    category: "Backend",
+    items: ["Node.js", "Express.js", "Golang (Basics)", "REST APIs", "GraphQL"],
+  },
+  {
+    category: "State Management",
+    items: ["Redux", "Zustand"],
+  },
+  {
+    category: "Testing & Tools",
+    items: ["Vitest", "NPM", "Git", "CI/CD"],
+  },
+];
 
 const experiences = [
   {
-    period: "2022 - Present",
-    role: "Senior Full Stack Developer",
-    company: "Tech Innovations Inc.",
-    description: "Leading development of enterprise SaaS applications with React, Node.js, and AWS.",
-  },
-  {
-    period: "2020 - 2022",
+    period: "Oct 2023 - Current",
     role: "Full Stack Developer",
-    company: "Digital Solutions Ltd.",
-    description: "Built and maintained e-commerce platforms and content management systems.",
+    company: "Current Company",
+    description:
+      "Building and maintaining scalable applications with Next.js and React, integrating Stripe payments, optimizing performance with memoization and code splitting, creating timezone-specific scheduling portals, developing internal NPM packages, writing unit tests with Vitest, and contributing to Golang backend development.",
   },
   {
-    period: "2018 - 2020",
-    role: "Frontend Developer",
-    company: "Creative Web Agency",
-    description: "Developed responsive websites and interactive user interfaces for clients.",
+    period: "Sept 2022 - Oct 2022",
+    role: "Web Development Intern",
+    company: "Exposys Data Labs",
+    description:
+      "Developed mass email validation and dispatcher using asyncio and aiodns, improving processing speed by 40% and reducing bounce rates by 20% through enhanced validation techniques.",
   },
-]
+];
 
 export default function AboutSection() {
   return (
@@ -42,7 +58,8 @@ export default function AboutSection() {
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold mb-4">About Me</h2>
             <p className="text-muted-foreground max-w-2xl mx-auto">
-              Get to know more about my background, skills, and experience as a Full Stack Developer.
+              Get to know more about my background, skills, and experience as a
+              Full Stack Developer.
             </p>
           </div>
         </ScrollReveal>
@@ -75,18 +92,24 @@ export default function AboutSection() {
               <ScrollReveal>
                 <h3 className="text-2xl font-bold mb-4">My Journey</h3>
                 <p className="text-muted-foreground mb-6">
-                  I'm Mirza Akeel, a passionate Full Stack Developer with over 5 years of experience building web
-                  applications. I specialize in creating elegant, efficient, and user-friendly solutions that solve
-                  real-world problems.
+                  I'm Mirza Akeel, a passionate Full Stack Developer with close
+                  to 2 years of experience building web applications. I
+                  specialize in creating elegant, efficient, and user-friendly
+                  solutions that solve real-world problems using modern
+                  technologies like React, Next.js, and Node.js.
                 </p>
                 <p className="text-muted-foreground mb-6">
-                  My approach combines technical expertise with creative problem-solving. I'm constantly learning and
-                  exploring new technologies to stay at the forefront of web development.
+                  My approach combines technical expertise with creative
+                  problem-solving. I'm constantly learning and exploring new
+                  technologies to stay at the forefront of web development, with
+                  a focus on performance optimization and user experience.
                 </p>
               </ScrollReveal>
 
               <ScrollReveal delay={1}>
-                <h3 className="text-2xl font-bold mt-8 mb-4">Skills & Technologies</h3>
+                <h3 className="text-2xl font-bold mt-8 mb-4">
+                  Skills & Technologies
+                </h3>
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-8">
                   {skills.map((skillGroup, index) => (
                     <Card
@@ -94,7 +117,9 @@ export default function AboutSection() {
                       className="bg-background/50 border-background-foreground/10 transition-all duration-300 hover:border-purple-500/20 hover:bg-background/70 hover-lift"
                     >
                       <CardContent className="pt-6 px-3 sm:px-6">
-                        <h4 className="font-semibold mb-3 text-purple-500">{skillGroup.category}</h4>
+                        <h4 className="font-semibold mb-3 text-purple-500">
+                          {skillGroup.category}
+                        </h4>
                         <div className="flex flex-wrap gap-2">
                           {skillGroup.items.map((skill) => (
                             <Badge
@@ -124,7 +149,9 @@ export default function AboutSection() {
                       <p className="text-sm text-purple-500">{exp.period}</p>
                       <h4 className="font-bold">{exp.role}</h4>
                       <p className="text-muted-foreground">{exp.company}</p>
-                      <p className="text-sm text-muted-foreground mt-1">{exp.description}</p>
+                      <p className="text-sm text-muted-foreground mt-1">
+                        {exp.description}
+                      </p>
                     </div>
                   ))}
                 </div>
@@ -137,5 +164,5 @@ export default function AboutSection() {
         </div>
       </div>
     </section>
-  )
+  );
 }

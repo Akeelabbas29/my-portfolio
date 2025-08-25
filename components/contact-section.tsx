@@ -34,6 +34,7 @@ export default function ContactSection() {
   };
 
   const handleSubmit = async (e: React.FormEvent) => {
+    console.log(e);
     e.preventDefault();
     setIsSubmitting(true);
 
